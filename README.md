@@ -17,3 +17,10 @@ Esta entrega foi adaptada ao SQL executado no painel Supabase durante o atendime
 
 ## Estado de validação
 Sintaxe TS/TSX verificada por parser TypeScript. A instalação de dependências não terminou neste ambiente, então não houve build completo, execução em navegador, teste de segurança integrado nem teste contra o Supabase real. Esta versão é candidata a testes, não produção. Não publique para uso de mobilidade real até validar rotas, acessibilidade e segurança em campo com profissionais e usuários.
+
+## Laboratório Google Maps (fase de testes)
+- Use `VITE_GOOGLE_MAPS_API_KEY` no Vercel, além das duas variáveis Supabase existentes. Não comite chaves.
+- A Maps Demo Key destina-se exclusivamente a prototipagem/testes; não ofereça o laboratório como serviço público. Restrinja acesso a testadores autorizados, confira os termos e restrições do Google. O ambiente Vercel chamado Production não equivale a autorização de uso comercial/operacional.
+- Em Encontrar destino/Navegação: mapa real, busca manual por locais em Volta Redonda, autorização explícita de localização, prévia de rota a pé com origem fixa ou posição estimada. A leitura do GPS não é armazenada; a posição é descartada ao sair do mapa. Sem rastreamento de trajeto ou instrução de navegação ativa. Mapa, Places e Routes precisam ser testados com a chave real; a cota demo pode limitar chamadas.
+- Teste parado, com permissão concedida/negada, GPS desligado, erro de API e pesquisa sem resultados. Nunca use o protótipo para orientar deslocamentos reais; validação com especialistas em orientação e mobilidade e usuários, auditoria de acessibilidade de percursos e requisitos de privacidade são necessárias antes de pilotos reais.
+- Módulos de ônibus e sensores permanecem demonstrativos, sem integração VRBus/ESP32.
